@@ -235,4 +235,8 @@ footer{
     .nav-menu{
         visibility: hidden;
     }
+
+    .overlay{
+        visibility: hidden;
+    }
 }
