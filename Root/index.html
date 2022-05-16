@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>The Great Pretender</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Great Pretender</title>
 </head>
+
 <body>
-    <div class="flex-hero">
+    <div class="flex-container">
         <header>
             <nav>
                 <div class="nav-home">
                     <a href="#" id="home">
-                        <img src="./img/Great_Pretender_Logo.png" class="logo"/>
+                        <img src="./img/Great_Pretender_Logo.png" alt="Great Pretender Logo" class="logo" />
                     </a>
                 </div>
                 <div class="nav-links">
@@ -24,20 +27,34 @@
                 <div class="nav-watch">
                     <a href="https://www.netflix.com"><span>WATCH NOW</span></a>
                 </div>
-                <div class="nav-mobile-btn">
-                    <img src="./img/waving-dollar-bills.png"/>
-                    <div class="nav-mobile-menu">
-
+                <div class="nav-menu-btn">
+                    <div class="burger burger-squeeze">
+                        <div class="burger-lines"></div>
                     </div>
                 </div>
+                <div class="nav-menu" id="mobileNav">
+                    <div class="nav-menu-links">
+                        <a href="#" class="nav-menu-link">HOME</a>
+                        <a href="#" class="nav-menu-link">CHARACTERS</a>
+                        <a href="#" class="nav-menu-link">ABOUT</a>
+                        <a href="#" class="nav-menu-link" style="color: rgb(218, 218, 218);">WATCH NOW</a>
+                    </div>
+                </div>
+                <div class="overlay" id="overlay"></div>
             </nav>
         </header>
         <div class="hero-container">
             <div class="hero-text">
-                <h1>THE GREAT PRETENDER</h1>
-                <p>Great Pretender (stylized as GREAT PRETENDER) is a Japanese original net animation series produced by Wit Studio, directed by Hiro Kaburagi and written by Ryōta Kosawa. The series' arcs are called "cases", and the first case (Los Angeles Connection) was released in June 2020 on Netflix in Japan. The series' first three cases (Los Angeles Connection, Singapore Sky, and Snow of London) were released worldwide on Netflix in August 2020, followed by its fourth case (Wizard of Far East) in November. The series also aired from July to December 2020 on Fuji TV's +Ultra anime programming block.</p>
+                <h1>GREAT PRETENDER</h1>
+                <p>Great Pretender (stylized as GREAT PRETENDER) is a Japanese original net animation series produced by
+                    Wit Studio, directed by Hiro Kaburagi and written by Ryōta Kosawa. The series' arcs are called
+                    "cases", and the first case (Los Angeles Connection) was released in June 2020 on Netflix in Japan.
+                    The series' first three cases (Los Angeles Connection, Singapore Sky, and Snow of London) were
+                    released worldwide on Netflix in August 2020, followed by its fourth case (Wizard of Far East) in
+                    November. The series also aired from July to December 2020 on Fuji TV's +Ultra anime programming
+                    block.</p>
             </div>
-            <img src="./img/hero_img.png" class="hero-img"/>
+            <img src="./img/hero_img.png" class="hero-img" alt="Image of Great Pretender characters" />
         </div>
     </div>
     <div class="about-container">
@@ -47,32 +64,37 @@
                 <div class="ratings">
                     <div class="rating">
                         <span>8.3/10</span>
-                        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi69oe3uuH3AhVAH7cAHbuhCN4QoiR6BAgqEAM&url=https%3A%2F%2Fmyanimelist.net%2Fanime%2F40052%2FGreat_Pretender&usg=AOvVaw0TbJlm6QCm3ThpHgZhh7VS"><span>MyAnimeList</span></a>
+                        <a
+                            href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi69oe3uuH3AhVAH7cAHbuhCN4QoiR6BAgqEAM&url=https%3A%2F%2Fmyanimelist.net%2Fanime%2F40052%2FGreat_Pretender&usg=AOvVaw0TbJlm6QCm3ThpHgZhh7VS"><span>MyAnimeList</span></a>
                     </div>
                     <div class="rating">
                         <span>7.9/10</span>
-                        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi69oe3uuH3AhVAH7cAHbuhCN4QoiR6BAgqEAY&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt11680468%2F&usg=AOvVaw1aH8yWYQKXOOpWnKATRVeX"><span>IMDb</span></a>
+                        <a
+                            href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi69oe3uuH3AhVAH7cAHbuhCN4QoiR6BAgqEAY&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt11680468%2F&usg=AOvVaw1aH8yWYQKXOOpWnKATRVeX"><span>IMDb</span></a>
                     </div>
                     <div class="rating">
                         <span>100%</span>
-                        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi69oe3uuH3AhVAH7cAHbuhCN4QoiR6BAgqEAk&url=https%3A%2F%2Fwww.rottentomatoes.com%2Ftv%2Fgreat_pretender&usg=AOvVaw2O_01ioO3qKWfZfDOfahtq"><span>Rotten Tomatoes</span></a>
+                        <a
+                            href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi69oe3uuH3AhVAH7cAHbuhCN4QoiR6BAgqEAk&url=https%3A%2F%2Fwww.rottentomatoes.com%2Ftv%2Fgreat_pretender&usg=AOvVaw2O_01ioO3qKWfZfDOfahtq"><span>Rotten
+                                Tomatoes</span></a>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section-even" id="section2">
+            <h2>Trailer</h2>
             <iframe src="https://www.youtube.com/embed/dr5yBBAR9Tg"></iframe>
-            <!-- <img src="./img/rice_farm.jpg" class="section-img"/>
-            <div class="section-text">
-                <h2>How is rice farmed?</h2>
-                <p>A paddy field is a flooded field of arable land used for growing semiaquatic crops, most notably rice and taro. It originates from the Neolithic rice-farming cultures of the Yangtze River basin in southern China, associated with pre-Austronesian and Hmong-Mien cultures. It was spread in prehistoric times by the expansion of Austronesian peoples to Island Southeast Asia, Southeast Asia including Northeastern India, Madagascar, Melanesia, Micronesia, and Polynesia. The technology was also acquired by other cultures in mainland Asia for rice farming, spreading to East Asia, Mainland Southeast Asia, and South Asia..</p>
-            </div> -->
         </section>
     </div>
     <div class="footer">
         <footer>
-            <span>This website was created for educational purposes only.</span>
+            <div class="footer-content">
+                <span>This website was created for educational purposes only.</span>
+                <span>Fan Made Website</span>
+            </div>
         </footer>
     </div>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
