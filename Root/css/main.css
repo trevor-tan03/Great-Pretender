@@ -9,13 +9,17 @@
 }
 
 :root{
-    --bg-main: white;
+    --bg-main: #110a12;
     --oxford-blue: #011936;
-    --acc-3: #006fca;
-    --acc-2: #c61c1f;
-    --acc-1: #e2e072;
-    --nav-menu: #e63535;
-    --nav-hover: #fefefe;
+
+    --acc-3: #a3d9f5;
+    --acc-2: #282631;
+    --acc-1: #1f1e25;
+
+    --nav-bar: transparent;
+
+    --nav-menu: #c61c1f;
+    --nav-hover: #ffffffc7;
 }
 
 body{
@@ -39,16 +43,30 @@ h1,h2,h3,h4,h5,h6{
     margin: 20px 0;
 }
 
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    padding: 20px 0px 20px 0px;
+    background-color: var(--nav-bar);
+}
+
 nav{
     width: 100%;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     font-family: 'steelfish';
     gap: 30px;
 }
 
+.logo{
+    margin-left: 20px;
+    filter: drop-shadow(3px 3px 2px rgb(0, 0, 0));
+}
+
 .nav-home{
-    flex: 1;
+    flex: 0.95;
 }
 
 .nav-links{
@@ -59,16 +77,21 @@ nav{
     overflow: hidden;
 }
 
+.nav-scrolled{
+    transition: background 0.5s ease-in;
+    --nav-bar: #2e2e2e;
+}
+
 .menu{
     display: none;
 }
 
 .nav-link{
-    color: black;
+    color: white;
 }
 
 .nav-watch{
-    background-color: var(--acc-2);
+    background-color: var(--nav-menu);
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -112,7 +135,7 @@ nav a{
 .burger{
     width: 40px;
     height: 6px;
-    background: var(--oxford-blue);
+    background: white;
     transition: all 0.3s ease-in-out;
 }
 
@@ -122,7 +145,7 @@ nav a{
     content: '';
     width: 40px;
     height: 6px;
-    background: var(--oxford-blue);
+    background: white;
     transition: all 0.3s ease-in-out;
 }
 
@@ -205,7 +228,7 @@ header{
 }
 
 footer{
-    height: 100%;
+    height: 200px;
     background-color: var(--oxford-blue);
     color: white;
 
