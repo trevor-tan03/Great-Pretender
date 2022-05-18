@@ -44,11 +44,27 @@ h1,h2,h3,h4,h5,h6{
 }
 
 header{
-    position: fixed;
     width: 100%;
     z-index: 4;
     padding: 20px 0px 20px 0px;
     background-color: var(--nav-bar);
+    position: fixed;
+}
+
+header.show{
+    --nav-bar: #030303;
+    transition: 0.3s ease;
+}
+
+.fade-in{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.fade-in.appear{
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 nav{
@@ -130,6 +146,8 @@ nav a{
     justify-content: center;
     cursor: pointer;
     z-index: 3;
+    background-color: var(--nav-menu);
+    border-radius: 80px;
 }
 
 .burger{
@@ -251,6 +269,10 @@ footer{
 
     .nav-menu-btn{
         display: flex;
+    }
+
+    header{
+        position: relative;
     }
 }
 

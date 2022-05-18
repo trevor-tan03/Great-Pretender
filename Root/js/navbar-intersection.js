@@ -1,19 +1,18 @@
-const aboutSection = document.querySelector('.hero-content');
+const aboutSection = document.querySelector('.flex-container');
 const header = document.querySelector('header')
 
 aboutSectionOptions = {
-    rootMargin: '-200px 0px 0px 0px'
+    rootMargin: '-600px 0px 0px 0px'
 };
 
 const observer = new IntersectionObserver(
 function(entries, observer) {
     entries.forEach(entry => {
-        if (!entries.isIntersecting){
-            console.log(entry.target)
-            header.classList.add('nav-scrolled');
+        if (!entry.isIntersecting){
+            header.classList.add('show');
         }
         else{
-            header.classList.remove('nav-scrolled');
+            header.classList.remove('show');
         }
     });
 }, aboutSectionOptions);
