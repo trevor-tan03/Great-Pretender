@@ -1,7 +1,7 @@
 @import url('./main.css');
 
 .flex-container{
-    background-image: url('../img/seattle.jpg');
+    background-color: var(--acc-1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -19,14 +19,16 @@
     justify-content: center;
 }
 
+
 .about-cases{
     text-align: left;
     overflow-wrap: break-word;
     filter: drop-shadow(3px 3px 3px black);
+    margin: 50px;
 }
 
-.targets{
-    text-align: center;
+.grid-targets-box{
+    margin-top: 100px;
 }
 
 .grid-targets{
@@ -38,20 +40,29 @@
     "case1 case2"
     "case3 case4";
     gap: 10px;
-    padding: 10px;
     filter: drop-shadow(2px 2px 2px black);
-    margin: 20px;
 }
 
-.target1, .target2, .target3, .target4{
+.target-container{
     width: 100%;
     height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+}
+
+.target{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     position: relative;
+    cursor: pointer;
 }
 
 .target-name{
     position: absolute;
-    bottom: 0;
+    top: 0;
     filter: drop-shadow(1px 1px 1px black);
     text-align: center;
     display: flex;
@@ -63,30 +74,97 @@
     background-color: black;
 }
 
-.target1 img, .target2 img, .target3 img, .target4 img{
+.target img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.target-container:hover .target img,
+.target-container:focus .target img{
+    transition: .5s;
+    transform: scale(1.3);
+}
+
+.case-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5% 0px 5%;
+    z-index: 1;
+    padding: 100px 0px 50px 0px;
+}
+
+.case-summary{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+.case-summary-text{
+    width: 50%;
+}
+
+.case-section{
+    background-color: var(--acc-2);
+}
+
+.case-section img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.case-card{
+    width: 350px;
+    height: 450px;
+    background-color: rgb(231, 231, 231);
+    filter: drop-shadow(2px 2px 2px black);
+    display: flex;
+    flex-direction: column;
+}
+
+.case-top{
+    margin: 30px;
+    height: 250px;
+}
+
+.case-top img{
     width: 100%;
     height: 100%;
 }
 
-.spacer{
+.case-bottom{
     height: 100%;
-    background-color: var(--oxford-blue);
-}
-
-.case1{
-    background-image: url('../img/cassano_mansion.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    height: 1000px;
+    margin: 0px 30px 0px 30px;
+    color: black;
 }
 
 @media screen and (max-width: 1024px) {
     .cases{
         flex-direction: column;
+        align-items: center;
     }
 
     .grid-targets{
         margin: 0px;
+    }
+
+    .case-section img{
+        height: 100%;
+    }
+
+    .case-summary{
+        flex-direction: column;
+    }
+
+    .case-summary-text{
+        width: 100%;
+    }
+
+    .case-card{
+        width: 100%;
     }
 }
