@@ -1,18 +1,26 @@
 @font-face {
     font-family: 'dosis';
-    src: url('./fonts/Dosis-Medium.ttf');
+    src: url('../fonts/Dosis-Medium.ttf');
 }
 
 @font-face {
     font-family: 'steelfish';
-    src: url('./fonts/steelfishbd.otf');
+    src: url('../fonts/steelfishbd.otf');
+}
+
+@font-face {
+    font-family: 'marker';
+    src: url('../fonts/PermanentMarker-Regular.ttf');
 }
 
 :root{
     --bg-main: #110a12;
     --oxford-blue: #011936;
 
-    --acc-3: #a3d9f5;
+    --sec-1: maroon;
+    --sec-2: gold;
+
+    --acc-3: #3c3949;
     --acc-2: #282631;
     --acc-1: #1f1e25;
 

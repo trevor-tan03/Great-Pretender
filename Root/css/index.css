@@ -131,7 +131,7 @@ td{
 }
 
 td a{
-    color: var(--acc-3);
+    color: rgb(255, 138, 138);
 }
 
 th{
