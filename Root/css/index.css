@@ -3,12 +3,7 @@
 .flex-container{
     display: flex;
     flex-direction: column;
-    background-image: url('../img/limo.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
     height: 100%;
-    padding: 0px 0px 600px 0px;
 }
 
 .hero-content{
@@ -22,26 +17,12 @@
     align-items: center;
 }
 
-.contrast-text{
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
-    padding: 20px;
-}
-
 .team-img{
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 512px;
     max-height: 512px;
-}
-
-.hero-text{
-    display: flex;
-    flex-direction: column;
-    filter: drop-shadow(0px 0px 8px rgb(88, 45, 45));
-    height: 100%;
-    width: 50%;
 }
 
 .about-container{
@@ -182,7 +163,7 @@ th{
 
     .alt3{
         flex-direction: column;
-        gap: 0px;
+        gap: 2rem;
     }
 
     .hero-content{

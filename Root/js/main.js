@@ -17,3 +17,10 @@ menuBtn.addEventListener('click', () => {
         menuOpen = false;
     }
 });
+
+const mobileCaseLink = document.querySelector('.cases-mobile')
+const mobileCaseDropdown = document.querySelector('.cases-mobile-dropdown')
+
+mobileCaseLink.addEventListener('click', () => {
+    mobileCaseDropdown.classList.toggle('open');
+})
