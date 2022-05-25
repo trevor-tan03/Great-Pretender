@@ -1,69 +1,32 @@
 @import url('./main.css');
 
-.about-cases{
-    text-align: left;
-    overflow-wrap: break-word;
-    filter: drop-shadow(3px 3px 3px black);
-    margin: 50px;
-}
-
-.grid-targets-box{
-    margin-top: 100px;
-}
-
-.grid-targets{
-    height: auto;
-    width: 100%;
-    max-width: 500px;
-    display: grid;
-    grid-template-areas: 
-    "case1 case2"
-    "case3 case4";
-    gap: 10px;
-    filter: drop-shadow(2px 2px 2px black);
-}
-
-.target-container{
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    overflow: hidden;
-    color: white;
-    text-decoration: none;
-}
-
-.target{
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+.flex-container{
     position: relative;
-    cursor: pointer;
 }
 
-.target-name{
-    position: absolute;
-    top: 0;
-    filter: drop-shadow(1px 1px 1px black);
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+section{
+    position: relative;
 }
 
-.target-case{
-    background-color: black;
-}
-
-.target img{
-    width: 100%;
+.all-cases{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     height: 100%;
-    object-fit: cover;
+    margin: 10% 5% 5% 5%;
+    gap: 1em;
 }
 
-.target-container:hover .target img,
-.target-container:focus .target img{
-    transition: .5s;
-    transform: scale(1.3);
+.grid-item{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.grid-item img{
+    height: 100%;
+    width: 100%;
 }
 
 .case-content-box{
@@ -72,7 +35,6 @@
     flex-direction: column;
     margin: 0px 5% 0px 5%;
     z-index: 1;
-    padding-top: 100px;
 }
 
 .case-content{
@@ -84,26 +46,8 @@
     width: 100%;
 }
 
-.case-content-divider{
-    padding-bottom: 100px;
-    width: 100%;
-    border-bottom: 2px solid rgb(136, 136, 136);
-}
-
 .case-summary-text{
     width: 50%;
-}
-
-.case-section-1{
-    background-color: var(--acc-3);
-}
-
-.case-section-2{
-    background-color: var(--acc-2);
-}
-
-.case-section-3{
-    background-color: var(--acc-1);
 }
 
 .banner{
@@ -236,5 +180,11 @@
         width: 100%;
         max-width: 250px;
         max-height: 250px;
+    }
+
+    .all-cases{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        padding-top: 100px;
     }
 }
