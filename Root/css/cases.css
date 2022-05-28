@@ -148,15 +148,6 @@ section{
 }
 
 @media screen and (max-width: 1024px) {
-    .cases{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .grid-targets{
-        margin: 0px;
-    }
-
     .case-section-1 img{
         height: 100%;
     }
