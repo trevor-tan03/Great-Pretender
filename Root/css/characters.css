@@ -1,9 +1,8 @@
 section{
     padding-top: 5em;
     margin: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 125px 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -15,6 +14,14 @@ section{
     text-align: center;
 }
 
+.characters-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    gap: 2%;
+}
+
 .character-grid{
     display: grid;
     justify-content: space-evenly;
@@ -22,14 +29,11 @@ section{
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(5, 1fr);
     background-color: var(--acc-2);
-    height: 100%;
-    gap: 1%;
-    padding-left: 4%;
 }
 
 .character{
-    width: 80%; 
-    height: 80%;
+    width: auto;
+    height: auto;
     border: 2px solid black;
 }
 
@@ -40,24 +44,22 @@ section{
 .character img{
     width: 100%;
     height: 100%; 
-    object-fit: cover;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit:cover;
 }
 
 .character-preview{
-    grid-area: "preview";
-    height: 100%;
-    width: 100%;
     background-color:var(--acc-3);
-
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .character-preview img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 50%;
+    object-fit: contain;
 }
 
 .character-info{
@@ -71,14 +73,14 @@ section{
 
 
 @media screen and (max-width: 1024px) {
-    section{
-        grid-template-columns: 1fr;
+    .characters-box{
+        flex-direction: column;
     }
 
     .character-grid{
-        grid-row: 3/span 4;
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: repeat(4, 1fr);
+        padding: 0;
         margin: 0;
     }
 }
