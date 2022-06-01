@@ -1,11 +1,13 @@
 const charPrev = document.getElementById('char-prev');
 const charName = document.getElementById('char-name');
-const charBirth = document.getElementById('char-birth');
+const charOccupation = document.getElementById('char-occupation');
 const charDesc = document.getElementById('char-desc');
+const char = document.querySelector('.character');
 
 const onClick = function(){
     let number = Number(this.id.slice(this.id.indexOf('e')+2)) - 1;
     getDetails(number);
+    selectCharacter(this.id, number);
 }
 
 function getDetails(char_id){
@@ -21,9 +23,21 @@ function getDetails(char_id){
             }
             
             charName.innerHTML = '<h2>' + data.details[char_id].name + '</h2>';
-            charBirth.innerHTML = '<p><b>' + 'Place of birth: ' + '</b>' + data.details[char_id].birth + '</p>';
+            charOccupation.innerHTML = '<p><b>' + 'Occupation: ' + '</b>' + data.details[char_id].occupation + '</p>';
             charDesc.innerHTML = '<p>' + data.details[char_id].desc + '<p>';
         })
+}
+
+function selectCharacter(char_id, number){
+    number += 1;
+    for(let i = 1; i < 26; i++){
+        if(i == number){
+            document.getElementById(char_id).style.border = "2px solid lime";
+        }
+        else{
+            document.getElementById("character"+i.toString()).style.border = "2px solid transparent";
+        }
+    }
 }
 
 for(let i = 1; i < 26; i++){

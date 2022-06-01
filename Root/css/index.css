@@ -23,6 +23,7 @@
     width: 100%;
     max-width: 512px;
     max-height: 512px;
+    filter: drop-shadow(2px 1px 1px crimson);   
 }
 
 .section-content{
@@ -35,8 +36,42 @@
     color: white;
 }
 
-.section-content img{
-    filter: drop-shadow(2px 1px 1px crimson); 
+.pill{
+    border-radius: 60px;
+    height: 60px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    text-transform: uppercase;
+    font-family: 'steelfish';
+    position: relative;
+    color: white;
+}
+
+.red-pill:hover{
+    background-color: maroon;
+    border: 2px solid maroon;
+}
+
+.other-pill:hover{
+    background-color: var(--acc-3);
+}
+
+.red-pill{
+    background-color: var(--nav-menu);
+    border: 2px solid var(--nav-menu);
+}
+
+.other-pill{
+    border: 2px solid var(--acc-3);
+}
+
+.play-btn{
+    height: 80%;
+    position: absolute;
+    left: 10%;
 }
 
 .section-text{
@@ -44,45 +79,9 @@
     word-wrap: break-word;
 }
 
-.section-card{
-    width: 40%;
-    height: 400px;
-    margin: 30px 0px 0px 0px;
-    border-radius: 16px;
-    filter: drop-shadow(4px 4px 4px black);
-}
-
-.section-card a{
-    color: white;
-}
-
-.section-card-inner{
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    background-color: var(--acc-3);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-position: center;
-    overflow: hidden;
-}
-
-.section-card:hover .section-card-inner,
-.section-card:focus .section-card-inner{
-    transform: scale(1.1);
-}
-
-.section-card h2{
-    font-size: 6vw;
-    filter: drop-shadow(4px 4px 4px black);
-}
-
 .alt1{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     background-color: var(--acc-1);
 }
 
@@ -147,10 +146,6 @@ th{
         align-self: center;
     }
 
-    .alt1{
-        gap: 0;
-    }
-
     .alt2{
         flex-direction: column;
         gap: 0px;
@@ -166,6 +161,10 @@ th{
         flex-direction: column;
     }
 
+    .section-content{
+        flex-direction: column;
+    }
+
     .section-text{
         width: 80%;
     }
@@ -177,6 +176,21 @@ th{
 
     iframe{
         width: 80%;
+    }
+
+    .pill{
+        width: 80%;
+        margin: 5%;
+    }
+
+    .play-btn{
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .play-btn{
+        visibility: hidden;
     }
 }
 

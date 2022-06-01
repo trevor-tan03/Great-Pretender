@@ -43,6 +43,12 @@ body{
     min-height: 100%;
 }
 
+.source{
+    color: var(--nav-hover);
+    font-weight: bold;
+    font-style: italic;
+}
+
 h1{
     font-size: 72pt;
     color: white;
@@ -243,13 +249,41 @@ nav a{
 footer{
     margin-top: auto;
     background-color: var(--oxford-blue);
+}
+
+.footer-content-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
     color: white;
 }
 
-.footer-content{
+.footer-text{
+    width: 50%;
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: column;
+    border-bottom: 2px solid var(--nav-hover);
+    padding-bottom: 20px;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.footer-link{
+    height: 100%;
+    width: 100%;
+    max-height: 32px;
+    max-width: 32px;
+}
+
+.footer-link img{
+    height: 100%;
+    width: 100%;
 }
 
 .cases-dropdown{
@@ -337,6 +371,22 @@ footer{
 
     #cases{
         border-bottom: 3px solid white;
+    }
+    
+    .footer-content-box{
+        flex-direction: column;
+    }
+    
+    .footer-text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid var(--nav-hover);
+        margin-bottom: 20px;
+    }
+
+    .footer-links{
+        width: 100%;
     }
 }
 
