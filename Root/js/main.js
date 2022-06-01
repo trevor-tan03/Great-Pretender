@@ -18,6 +18,13 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
+const CaseLink = document.querySelector('.cases');
+const CaseDropdown = document.querySelector('.cases-dropdown');
+
+CaseLink.addEventListener('click', () => {
+    CaseDropdown.classList.toggle('open');
+});
+
 const mobileCaseLink = document.querySelector('.cases-mobile')
 const mobileCaseDropdown = document.querySelector('.cases-mobile-dropdown')
 
