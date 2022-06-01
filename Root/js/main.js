@@ -18,11 +18,29 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-const CaseLink = document.querySelector('.cases');
+let CaseLink = document.getElementById('cases-link');
 const CaseDropdown = document.querySelector('.cases-dropdown');
+const arrow = document.querySelector('.dropdown-arrow');
 
-CaseLink.addEventListener('click', () => {
-    CaseDropdown.classList.toggle('open');
+let showDropdown = false;
+
+document.addEventListener('click', (evt) => {
+    let clicked = evt.target;
+    if(!showDropdown && clicked == CaseLink){
+        CaseDropdown.classList.add('open');
+        arrow.classList.add('flip');
+
+        showDropdown = true;
+    }
+    else if(showDropdown){
+        CaseDropdown.classList.remove('open');
+        arrow.classList.remove('flip');
+
+        showDropdown = false;
+    }
+    else{
+        return;
+    }
 });
 
 const mobileCaseLink = document.querySelector('.cases-mobile')

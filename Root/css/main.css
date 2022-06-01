@@ -293,6 +293,8 @@ footer{
     min-width: 150px;
     background-color: var(--acc-1);
     z-index: 2;
+    padding: 10px;
+    border: 1px solid var(--nav-menu);
 }
 
 .cases-dropdown a{
@@ -313,13 +315,6 @@ footer{
 
 .cases{
     cursor: pointer;
-}
-
-.cases:hover .cases-dropdown{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border: 1px solid var(--nav-menu);
 }
 
 .cases-mobile-dropdown{
@@ -358,6 +353,20 @@ footer{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.dropdown-arrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    vertical-align: middle;
+    margin: 0px 0px 10px 5px;
+}
+
+.flip{
+    transform: rotate(225deg);
 }
 
 @media screen and (max-width: 1024px) {
