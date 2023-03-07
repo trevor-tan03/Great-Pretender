@@ -1,6 +1,8 @@
 # Great-Pretender
 This website is made for practicing my understanding of HTML, CSS and JavaScript. I based the website on the anime, Great Pretender just so I know what to add to the website.
 
+Link: https://great-pretender-fansite.netlify.app
+
 ## Progress
 - [x] Home Page
 - [x] Characters Page
